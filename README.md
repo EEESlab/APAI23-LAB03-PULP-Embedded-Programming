@@ -44,5 +44,4 @@ cd APAI23-LAB03-PULP-Embedded-Programming
 to run the code enter in a terminal
 `make clean all run`
 
-DO NOT FORGET: on every new terminal you open, you must do `module load pulp-sdk`
-`module load pulp-sdk` once. Then you can do `make clean all run`
+DO NOT FORGET: on every new terminal you open, you must do `module load pulp-sdk` once. Then you can do `make clean all run`
