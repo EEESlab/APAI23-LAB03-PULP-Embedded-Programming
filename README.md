@@ -1,4 +1,4 @@
-# APAI-LAB02: Basics of Embedded Programming on PULP
+# APAI-LAB03: Basics of Embedded Programming on PULP
 
 ## Summary:
 The target device for the lab sessions is the multi-core [PULP](https://github.com/pulp-platform/pulp) platform.
@@ -20,11 +20,8 @@ Instructions:
 
 
 ## Quickstart
-### How to clone the code
 
-
-
-### How to access the server
+#### How to access the server
 
 1. Open a browser and paste this link:
 `https://compute.eees.dei.unibo.it:8443/guacamole`
@@ -40,7 +37,7 @@ cd APAI23-LAB03-PULP-Embedded-Programming
 6. start working !
 
 
-### How to run the code
+#### How to run the code
 to run the code enter in a terminal
 `make clean all run`
 
