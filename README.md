@@ -12,12 +12,12 @@ The PULP Virtual Platform simulator GVSOC, which is included within the [PULP SD
 
 ## How to deliver the assignment:
 
-Instructions:
-* Use Virtuale, upload only the assignment file named as follows: LAB#_APAI_yourname.ipynb
+Use Virtuale, upload only the assignment file named as follows: LAB#_APAI_yourname.ipynb
 
 
-## Assignment DEADLINE: 19/10/2023 (at 16:00)
+**Assignment DEADLINE: 19/10/2023 (at 16:00)**
 
+___
 
 ## Quickstart
 
@@ -26,7 +26,7 @@ Instructions:
 1. Open a browser and paste this link:
 `https://compute.eees.dei.unibo.it:8443/guacamole`
 
-2. access with your credentials
+2. access with your credentials. We distribute credentials by hand.
 3. open a new terminal
 4. clone this repository and go to your working directory.
 ```
@@ -38,7 +38,10 @@ cd APAI23-LAB03-PULP-Embedded-Programming
 
 
 #### How to run the code
-to run the code enter in a terminal
-`make clean all run`
+**[DO NOT FORGET]** Every time you open a new terminal run:
 
-DO NOT FORGET: on every new terminal you open, you must do `module load pulp-sdk` once. Then you can do `make clean all run`
+`module load pulp-sdk`
+
+To run the code enter in a terminal
+
+`make clean all run`
