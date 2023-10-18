@@ -15,7 +15,7 @@ The PULP Virtual Platform simulator GVSOC, which is included within the [PULP SD
 Use Virtuale, upload only the assignment file named as follows: LAB#_APAI_yourname.ipynb
 
 
-**Assignment DEADLINE: 19/10/2023 (at 16:00)**
+**Assignment DEADLINE: 26/10/2023 (at 16:00)**
 
 ___
 
