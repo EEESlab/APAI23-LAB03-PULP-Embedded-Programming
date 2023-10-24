@@ -24,14 +24,14 @@ PI_L2 int matrix[N * M]; // the matrix as an array of size N*M
 PI_L2 int vector[M];	 // the vector as an array of size M
 // output variable
 PI_L2 int output_vec[N]; // N*M x M*1 -> N*1
-/*  Note: PI_L2 is an attribute for "forcing" allocation in L2 memory. 
+/*  Note: PI_L2 is an attribute for "forcing" allocation in L2 memory.
 	Ref: /pulp/pulp-sdk/rtos/pulpos/common/include/pos/data/data.h:54: */
 
 void start_perf_counter()
 {
 	// enable the perf counter of interest
-	pi_perf_conf(	1 << PI_PERF_CYCLES | 	// count cycles
-					1 << PI_PERF_INSTR);	// count instructions
+	pi_perf_conf(	1 << PI_PERF_/*YOUR_CODE_HERE*/ | 	// count cycles
+					1 << PI_PERF_/*YOUR_CODE_HERE*/ );	// count instructions
 	// reset the perf counters
 	pi_perf_reset();
 	//  start the perf counter
@@ -47,7 +47,7 @@ void stop_perf_counter()
 	uint32_t cycles_counter = pi_perf_read(PI_PERF_CYCLES);
 	uint32_t instr_counter = pi_perf_read(PI_PERF_INSTR);
 
-	/* 
+	/*
 		TASK 2.2
 		Measure:
 			- How many MAC operations are needed for the gemv
@@ -84,7 +84,7 @@ void stop_perf_counter()
 // print array elements
 void print_array(int * A_ar, int size)
 {
-	for(int i=0;i<size;i++) 
+	for(int i=0;i<size;i++)
 		printf("%d ", A_ar[i]); // print array element
 	printf("\n");
 
@@ -92,10 +92,10 @@ void print_array(int * A_ar, int size)
 
 /* generic matrix-vector multiplication */
 int __attribute__((noinline)) gemv(int size_N, int size_M, int *mat_i, int *vec_i, int *vec_o)
-{	
-	/* 
+{
+	/*
 	TASK 2.1
-	- you must count the MAC by increasing a counter in the inner loop of the gemv. 
+	- you must count the MAC by increasing a counter in the inner loop of the gemv.
 	- use the "mac_counter" global variable
 	*/
 	mac_counter=0;
@@ -132,14 +132,11 @@ int main()
 	printf("\n");
 
 	/* call the GEneric Matrix-Vector (gemv) function */
-	start_perf_counter();	
 	gemv(N, M, matrix, vector, output_vec);
-	stop_perf_counter(); 
-
 
 	// print and check the results
 	printf("\nThe %d output elements are: \n", N);
-	print_array(output_vec, N);	
+	print_array(output_vec, N);
 
 	// check here the results
 	int correctness = 1;
